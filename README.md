@@ -13,7 +13,8 @@ client-reviews.html         Client Reviews
 about-us.html                About Us
 free-assessment.html         Free Assessment (form)
 contact-us.html               Contact Us (form)
-blog.html                     Placeholder — see "About the blog" below
+blog.html                     Blog listing (10 posts)
+blog/                          Individual blog post pages
 css/style.css                 All styles (navy/gold design system)
 js/main.js                     Mobile nav toggle + form handling
 ```
@@ -50,9 +51,7 @@ Before you retire the WordPress hosting, download those images and swap the `<im
 
 ## About the blog
 
-The old WordPress blog is a content-managed section that changes over time, which doesn't fit a hand-written static rebuild the same way the fixed pages do. `blog.html` is a placeholder for now. Good options going forward:
-- Keep the blog running on WordPress only (as a subdomain like `blog.spanone.com`) while everything else runs on GitHub Pages.
-- Or convert posts to Markdown and add a static-site generator (e.g. Eleventy or Hugo) later, once you're ready.
+`blog.html` now lists SpanOne's 10 current posts as static pages under `/blog/`, pulled in from the live WordPress blog at the time of this rebuild. Since these are now plain HTML files, adding a new post going forward means duplicating one of the files in `/blog/` and editing the content by hand (or asking Claude to do it) — there's no CMS or admin panel anymore. If posting frequently becomes important, a static-site generator (e.g. Eleventy or Hugo) that builds pages from Markdown would be worth adding later.
 
 ## Local preview
 
