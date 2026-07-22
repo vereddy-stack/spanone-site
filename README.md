@@ -22,7 +22,7 @@ js/main.js                     Mobile nav toggle + form handling
 
 Both forms (`free-assessment.html`, `contact-us.html`) use a plain `mailto:` approach instead of a forms service:
 
-- On submit, JavaScript builds a `mailto:support@spanone.com` link pre-filled with the visitor's answers (subject + body) and opens it.
+- On submit, JavaScript builds a `mailto:spanoneinc@gmail.com` link pre-filled with the visitor's answers (subject + body) and opens it.
 - This opens the visitor's own email app with a ready-to-send message — nothing is transmitted silently, and there's no backend, database, or third-party form service involved.
 - **Trade-off:** this only works if the visitor has an email client configured on their device (desktop mail app, or a phone with Mail/Gmail set up). If they don't, the button won't do anything visible. If you outgrow this, a small serverless function (e.g. a free Cloudflare Worker) can send mail server-side without changing the form markup much — but that's a deliberate future upgrade, not something built in now.
 
