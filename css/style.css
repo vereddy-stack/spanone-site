@@ -522,6 +522,54 @@ section.tight { padding: 48px 0; }
 }
 .back-link:hover { color: var(--navy); }
 
+/* ---------- Placeholder graphics ---------- */
+/* Used only where a real photo genuinely isn't available. */
+.img-placeholder {
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-tint) 100%);
+}
+.img-placeholder::before {
+  content: "◆";
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--gold);
+  opacity: 0.9;
+}
+.blog-card .img-placeholder {
+  aspect-ratio: 16/10;
+  min-height: 0;
+  border-bottom: 3px solid var(--gold);
+}
+.article-hero-img.img-placeholder {
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  min-height: 0;
+  margin: 0 auto 8px;
+  border: 1px solid var(--line);
+}
+.hero-figure .img-placeholder {
+  min-height: 320px;
+}
+
+.avatar-initials {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-tint) 100%);
+  border: 1px solid var(--line);
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 /* ---------- Footer ---------- */
 footer.site {
   background: var(--navy-deep);
