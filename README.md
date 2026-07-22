@@ -13,8 +13,7 @@ client-reviews.html         Client Reviews
 about-us.html                About Us
 free-assessment.html         Free Assessment (form)
 contact-us.html               Contact Us (form)
-blog.html                     Blog listing (10 posts)
-blog/                          Individual blog post pages
+blog.html                     Placeholder — see "About the blog" below
 css/style.css                 All styles (navy/gold design system)
 js/main.js                     Mobile nav toggle + form handling
 ```
@@ -23,7 +22,7 @@ js/main.js                     Mobile nav toggle + form handling
 
 Both forms (`free-assessment.html`, `contact-us.html`) use a plain `mailto:` approach instead of a forms service:
 
-- On submit, JavaScript builds a `mailto:spanoneinc@gmail.com` link pre-filled with the visitor's answers (subject + body) and opens it.
+- On submit, JavaScript builds a `mailto:support@spanone.com` link pre-filled with the visitor's answers (subject + body) and opens it.
 - This opens the visitor's own email app with a ready-to-send message — nothing is transmitted silently, and there's no backend, database, or third-party form service involved.
 - **Trade-off:** this only works if the visitor has an email client configured on their device (desktop mail app, or a phone with Mail/Gmail set up). If they don't, the button won't do anything visible. If you outgrow this, a small serverless function (e.g. a free Cloudflare Worker) can send mail server-side without changing the form markup much — but that's a deliberate future upgrade, not something built in now.
 
@@ -51,7 +50,9 @@ Before you retire the WordPress hosting, download those images and swap the `<im
 
 ## About the blog
 
-`blog.html` now lists SpanOne's 10 current posts as static pages under `/blog/`, pulled in from the live WordPress blog at the time of this rebuild. Since these are now plain HTML files, adding a new post going forward means duplicating one of the files in `/blog/` and editing the content by hand (or asking Claude to do it) — there's no CMS or admin panel anymore. If posting frequently becomes important, a static-site generator (e.g. Eleventy or Hugo) that builds pages from Markdown would be worth adding later.
+The old WordPress blog is a content-managed section that changes over time, which doesn't fit a hand-written static rebuild the same way the fixed pages do. `blog.html` is a placeholder for now. Good options going forward:
+- Keep the blog running on WordPress only (as a subdomain like `blog.spanone.com`) while everything else runs on GitHub Pages.
+- Or convert posts to Markdown and add a static-site generator (e.g. Eleventy or Hugo) later, once you're ready.
 
 ## Local preview
 
