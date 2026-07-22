@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Honeypot: if a hidden bot-only field got filled in, pretend success and stop.
       var honeypot = form.querySelector('[name="_honeypot"]');
       if (honeypot && honeypot.value) {
-        showStatus(form, 'Thanks — we got your submission.');
+        showStatus(form, 'Thank you! We will be in touch with you soon.');
         form.reset();
         return;
       }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email: emailValue,
         message: formLabel + '\n\n' + lines.join('\n'),
       }).then(function () {
-        showStatus(form, 'Thanks — your message has been sent. We\'ll be in touch within 1 business day.');
+        showStatus(form, 'Thank you! We will be in touch with you soon.');
         form.reset();
       }).catch(function (err) {
         console.error('EmailJS error:', err);
